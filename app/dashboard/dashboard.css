@@ -1,0 +1,96 @@
+.dashboard-root {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 220px;
+  background: #0f172a;
+  color: #fff;
+  padding: 1rem;
+}
+.brand {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.sidebar ul { list-style:none; padding:0; margin:0 }
+.sidebar li { margin-top:0.5rem }
+.sidebar a {
+  color: #cbd5e1;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0.5rem;
+  border-radius: 6px;
+}
+
+.sidebar a .item-label { display:inline-block }
+
+.sidebar a.active {
+  background: linear-gradient(90deg, rgba(14,165,233,0.12), rgba(14,165,233,0.06));
+  color: #e6f6ff;
+  font-weight: 600;
+}
+
+.sidebar a:active { transform: translateY(1px) scale(0.995) }
+.sidebar li + li {
+  margin-top: 0.5rem;
+}
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  padding: 1rem;
+  border-bottom: 1px solid #e6eef8;
+}
+.content {
+  padding: 1.5rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e6eef8;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+}
+
+.mt-4 { margin-top: 1rem; }
+
+.blog-header .muted {
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.label { font-weight: 600; margin-bottom: 0.5rem; display:block; }
+
+.input-textarea {
+  width: 100%;
+  min-height: 10rem;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+.controls { display:flex; justify-content:space-between; align-items:center; margin-top:0.75rem; }
+.char-count { color:#94a3b8; font-size:0.9rem }
+
+.btn { padding:0.5rem 0.75rem; border-radius:6px; border:1px solid transparent; background:transparent; cursor:pointer }
+.btn.primary, .btn.primary:disabled { background:#0ea5e9; color:#fff; border-color:#0ea5e9 }
+.btn.primary:hover { filter:brightness(0.95) }
+.btn:disabled { opacity:0.6; cursor:not-allowed }
+
+.reply-header { display:flex; justify-content:space-between; align-items:center }
+.reply-actions { display:flex; gap:0.5rem }
+.reply-body { margin-top:0.75rem }
+
+.error { margin-top:0.75rem; color:#b91c1c }
+
+.spinner {
+  display:inline-block;
+  width:18px; height:18px; border:3px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius:50%;
+  animation:spin 0.9s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg) } }
